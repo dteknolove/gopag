@@ -6,14 +6,14 @@ import (
 )
 
 type PaginationInfo struct {
-	CurrentPage int32
-	Limit       int32
-	Offset      int32
-	TotalPages  int32
-	NextPage    int32
-	PrevPage    int32
-	TotalPage   int32
-	TotalData   int32
+	CurrentPage int32 `json:"current_page"`
+	Limit       int32 `json:"limit"`
+	Offset      int32 `json:"offset"`
+	TotalPages  int32 `json:"total_pages"`
+	NextPage    int32 `json:"next_page"`
+	PrevPage    int32 `json:"prev_page"`
+	TotalPage   int32 `json:"total_page"`
+	TotalData   int32 `json:"total_data"`
 }
 
 func CalculateLimitOffset(pageSizeStr, pageNumberStr string) (limit, offset int16, err error) {
